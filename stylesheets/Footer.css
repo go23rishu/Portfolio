@@ -1,0 +1,43 @@
+.footer {
+  background-color: #000b16;
+  padding-top: 10vh;
+  text-align: center;
+  padding-bottom: 2vh;
+}
+.footer > h6 {
+  font-family: "Mono";
+  color: rgb(155, 166, 219);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2vh;
+  font-size: 13px;
+  padding-top: 2vh;
+}
+.footer > .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  color: rgb(155, 166, 219);
+  font-size: 18px;
+  display: none;
+}
+.footer > .icons > i {
+  margin-left: 10px;
+}
+.footer > .email {
+  font-family: "Mono";
+  font-size: 13px;
+  margin-top: 2vh;
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer > .icons {
+    display: block;
+  }
+  .footer > .email {
+    display: block;
+  }
+}

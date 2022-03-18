@@ -1,0 +1,41 @@
+.getInTouch {
+  text-align: center;
+  padding: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.getInTouch > p {
+  width: 40vw;
+}
+.getInTouch > a {
+  color: aqua;
+  padding: 10px 30px;
+  border: solid 0.5px aqua;
+  border-radius: 5px;
+  margin-top: 25px;
+  font-family: "Mono";
+  font-size: 15px;
+  text-decoration: none;
+}
+.getInTouch > a:hover {
+  background-color: rgb(1, 218, 218);
+  color: #000b16;
+  transition: 0.5s;
+}
+@media screen and (max-width: 1024px) {
+  .getInTouch > p {
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 650px) {
+  .getInTouch > p {
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 360px) {
+  .getInTouch > p {
+    width: 90vw;
+  }
+}

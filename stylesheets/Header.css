@@ -1,0 +1,248 @@
+.header {
+  height: 100vh;
+  background-color: #000b16;
+  background: linear-gradient(
+      to right,
+      #000b16 50%,
+      #000b16c5 20%,
+      #000b16dc 20%
+    ),
+    url("./../assets/photo.jpeg");
+  color: wheat;
+  padding: 10vh 15vw;
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  background-size: cover, 60% auto;
+}
+.header > h1 {
+  background-color: transparent;
+}
+.header > h1 > .text_1 {
+  animation: text1;
+}
+
+.header > h1 > .text_2 {
+  animation: text2;
+}
+
+.header > h1 > .text_1,
+.header > h1 > .text_2 {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  animation-duration: 10s;
+  animation-timing-function: steps(15, end);
+  animation-iteration-count: infinite;
+  font-family: "Poppins", sans-serif;
+  color: rgb(107, 106, 106);
+  font-size: 4.5vw;
+  font-weight: 600;
+  background-color: transparent;
+}
+
+.header > h1 > .text_1::after,
+.header > h1 > .text_2::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  animation: caret infinite;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(1, end);
+  background-color: transparent;
+}
+
+@keyframes text2 {
+  0%,
+  50%,
+  100% {
+    width: 0;
+  }
+
+  60%,
+  90% {
+    width: 12em;
+  }
+}
+
+@keyframes text1 {
+  0%,
+  50%,
+  100% {
+    width: 0;
+  }
+  10%,
+  40% {
+    width: 12em;
+  }
+}
+
+@keyframes caret {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.header > #name {
+  color: rgb(1, 218, 218);
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  background-color: transparent;
+}
+.header > #rishu {
+  font-family: "Poppins", sans-serif;
+  color: rgb(155, 166, 219);
+  font-size: 4.5vw;
+  font-weight: 600;
+  background-color: transparent;
+}
+.header > .small-desc {
+  background-color: transparent;
+  font-size: 1.15rem;
+  width: 60%;
+  color: darkgray;
+  font-weight: 400;
+}
+.header > a > button {
+  border: 1.5px solid rgb(1, 218, 218);
+  background: none;
+  color: rgb(1, 218, 218);
+  border-radius: 5px;
+  font-weight: 500;
+  padding: 2vh 2vw;
+  text-decoration: none;
+  margin-top: 5vh;
+  font-family: "Roboto Slab", serif;
+  letter-spacing: 1px;
+  font-weight: 300;
+  font-size: 14px;
+}
+.header > a > button:hover {
+  background-color: rgb(1, 218, 218);
+  color: #000b16;
+  transition: 0.5s;
+}
+/* 15 */
+.btn-15 {
+  color: aqua;
+  border: 1px solid aqua;
+  box-shadow: 0 0 5px aqua 0 0 5px aqua inset;
+  z-index: 1;
+}
+.btn-15:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background: aqua;
+  box-shadow: 0 0 20px aqua;
+  transition: all 0.3s ease;
+}
+.btn-15:hover {
+  color: #fff;
+}
+.btn-15:hover:after {
+  left: 0;
+  width: 100%;
+}
+.btn-15:active {
+  top: 2px;
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    padding-left: 7vw;
+    background-size: cover, 80% auto;
+  }
+  .header > h1 > .text_1,
+  .header > h1 > .text_2 {
+    font-size: 2.75rem;
+  }
+  .header > #name {
+    font-size: 1rem;
+  }
+  .header > #rishu {
+    font-size: 3rem;
+  }
+  .header > .small-desc {
+    width: 100%;
+    font-size: 18px;
+  }
+  .header > a > button {
+    font-size: 18px;
+    letter-spacing: 0.5px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .header {
+    background-size: cover, 100% auto;
+  }
+}
+@media screen and (max-width: 650px) {
+  .header {
+    background: transparent;
+    background-color: #000b16;
+  }
+  .header > h1 > .text_1,
+  .header > h1 > .text_2 {
+    font-size: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .header > #name {
+    font-size: 1rem;
+  }
+  .header > #rishu {
+    font-size: 3rem;
+  }
+  .header > .small-desc {
+    width: 100%;
+    font-size: 19px;
+  }
+  .header > a > button {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+  @keyframes text2 {
+    0%,
+    50%,
+    100% {
+      width: 0;
+    }
+
+    60%,
+    90% {
+      width: 92vw;
+    }
+  }
+
+  @keyframes text1 {
+    0%,
+    50%,
+    100% {
+      width: 0;
+    }
+    10%,
+    40% {
+      width: 83vw;
+    }
+  }
+}
+@media screen and (max-width: 360px) {
+  .header > h1 > .text_1,
+  .header > h1 > .text_2 {
+    font-size: 1.5rem;
+  }
+  .header > #rishu {
+    font-size: 2.5rem;
+  }
+  .header > #name {
+    font-size: 0.75rem;
+  }
+}

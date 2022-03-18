@@ -1,0 +1,100 @@
+.whereWorked,
+.thingsBuilt {
+  background-color: #000b16;
+  padding: 10vh 20vw;
+  font-family: "Poppins", sans-serif;
+  padding-bottom: 20vh;
+}
+.whereWorked > .mainTitle,
+.thingsBuilt > .mainTitle {
+  display: flex;
+  align-items: center;
+}
+.whereWorked > .mainTitle > .title,
+.thingsBuilt > .mainTitle > .title {
+  margin-left: 20px;
+  font-weight: 600;
+  color: rgb(155, 166, 219);
+  font-size: 28px;
+}
+.whereWorked > .whereWorkedMenu {
+  display: flex;
+  justify-content: space-between;
+}
+.whereWorked > .whereWorkedMenu > .rightMenu > .right {
+  padding-left: 45px;
+}
+.whereWorked > .whereWorkedMenu > .rightMenu > .hide {
+  display: none;
+}
+.whereWorked > .whereWorkedMenu > .leftMenu > .left {
+  border-left: solid 0.5px rgb(1, 218, 218);
+  height: 40px;
+  padding: 10px 15px;
+  transition: 0.5s;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2px;
+  cursor: pointer;
+}
+.whereWorked > .whereWorkedMenu > .leftMenu > .left:hover {
+  background-color: rgba(255, 255, 255, 0.144);
+}
+.whereWorked > .whereWorkedMenu > .rightMenu > .right > .aboutWork {
+  width: 80%;
+  margin-top: 20px;
+}
+.whereWorked > .whereWorkedMenu > .rightMenu > .right > .aboutWork > ul > li {
+  margin-top: 15px;
+  display: list-item;
+  list-style-type: ">>     ";
+}
+
+@media screen and (max-width: 1100px) {
+}
+@media screen and (max-width: 1024px) {
+  .whereWorked,
+  .thingsBuilt {
+    padding: 10vh 10vw;
+  }
+  .whereWorked > .whereWorkedMenu > .rightMenu > .right > .aboutWork {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .whereWorked,
+  .thingsBuilt {
+    padding: 10vh 10vw;
+  }
+  .whereWorked > .whereWorkedMenu {
+    flex-direction: column;
+  }
+  .whereWorked > .whereWorkedMenu > .leftMenu {
+    display: flex;
+    justify-content: space-around;
+    overflow-x: scroll;
+  }
+  .whereWorked > .whereWorkedMenu > .leftMenu > .left {
+    border-top: solid 0.5px rgb(1, 218, 218);
+    border-left: none;
+    width: 20vw;
+    margin-bottom: 2vh;
+    margin-top: 5vh;
+  }
+  .whereWorked > .whereWorkedMenu > .rightMenu > .right {
+    padding-left: 0;
+  }
+  .whereWorked > .whereWorkedMenu > .rightMenu > .right > .aboutWork {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 360px) {
+  .whereWorked > .mainTitle > .number,
+  .whereWorked > .mainTitle > .title,
+  .thingsBuilt > .mainTitle > .number,
+  .thingsBuilt > .mainTitle > .title {
+    font-size: 1.5rem;
+  }
+}

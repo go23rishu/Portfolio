@@ -1,0 +1,61 @@
+.sticky-icons {
+  display: flex;
+  justify-content: space-between;
+  z-index: 999;
+  color: rgb(155, 166, 219);
+}
+.sticky-icons > .social-media > .vl {
+  border-left: 2px solid rgb(155, 166, 219);
+  height: 100px;
+}
+.sticky-icons > .social-media {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 0;
+  left: 3vw;
+  background-color: transparent;
+}
+.sticky-icons > .social-media > a > i {
+  margin-bottom: 4vh;
+  font-size: 20px;
+  color: rgb(155, 166, 219);
+}
+.sticky-icons > .email {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  right: 3vw;
+  writing-mode: vertical-rl;
+  letter-spacing: 5px;
+  font-family: "Roboto Slab", serif;
+  font-size: 12px;
+  background-color: transparent;
+}
+.sticky-icons > .email > .vl {
+  border-left: 2px solid rgb(155, 166, 219);
+  height: 100px;
+  position: fixed;
+  bottom: 0;
+  right: 3vw;
+}
+.sticky-icons > .email > span {
+  margin-bottom: 18vh;
+  background-color: transparent;
+}
+.sticky-icons > .email > span:hover,
+.sticky-icons > .social-media > a > i:hover {
+  color: rgb(1, 218, 218);
+  cursor: pointer;
+  transform: scale(1.1, 1.1);
+  transition: 1s;
+}
+
+@media screen and (max-width: 1024px) {
+  .sticky-icons {
+    display: none;
+  }
+}

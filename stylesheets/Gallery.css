@@ -1,0 +1,82 @@
+@font-face {
+  font-family: "Cursive";
+  src: url(.././fonts/Anydore.otf);
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10vh 10vw;
+  align-items: center;
+  background-color: #000b16;
+  justify-content: space-between;
+}
+.gallery > .left > h1 {
+  font-family: "Cursive";
+  font-size: 64px;
+  color: rgb(155, 166, 219);
+}
+
+.gallery > .right {
+  display: flex;
+  flex-direction: column;
+  width: 55vw;
+}
+.gallery > .right > center > h6 {
+  font-family: "Mono";
+  font-size: 10px;
+  color: rgb(155, 166, 219);
+  margin-bottom: 25px;
+}
+.gallery > .right > .top > ul,
+.gallery > .right > .bottom > ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  display: block;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+  text-align: center;
+  scroll-behavior: smooth;
+}
+.gallery > .right > .top > ul > li,
+.gallery > .right > .bottom > ul > li {
+  list-style-type: none;
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  display: inline-block;
+  text-align: center;
+  /* background: #000b16; */
+  background: rgba(0, 255, 255, 0.336);
+  color: #9b9dad;
+  font-size: clamp(18px, 2.5vw, 22px);
+  margin-right: 5px;
+}
+.gallery > .right > .top > ul > li > img,
+.gallery > .right > .bottom > ul > li > img {
+  display: block;
+  height: auto;
+  object-fit: contain;
+  max-width: 240px;
+  opacity: 0.2;
+}
+.gallery > .right > .top > ul > li > img:hover,
+.gallery > .right > .bottom > ul > li > img:hover {
+  opacity: 1;
+  transition: 1s;
+  transform: scale(1.5);
+}
+@media screen and (max-width: 750px) {
+  .gallery {
+    flex-direction: column;
+  }
+  .gallery > .right {
+    width: 100%;
+  }
+  .gallery > .right > .top > ul > li > img,
+  .gallery > .right > .bottom > ul > li > img {
+    max-width: 320px;
+  }
+}

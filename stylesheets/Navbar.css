@@ -1,0 +1,290 @@
+:root {
+  --step-0: clamp(0.63rem, calc(0.58rem + 0.24vw), 0.75rem);
+}
+.navbar {
+  padding: 3vh 5vw;
+  background-color: #000a14;
+  box-shadow: -1px 5px 15px 0px rgba(0, 0, 0, 0.88);
+  -webkit-box-shadow: -1px 5px 15px 0px rgba(0, 0, 0, 0.88);
+  -moz-box-shadow: -1px 5px 15px 0px rgba(0, 0, 0, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.navbar-logo > img {
+  height: 50px;
+  width: auto;
+  object-fit: cover;
+}
+.navbar > .navbar-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15px;
+  background-color: #000a14;
+}
+.navbar-menu > span {
+  margin-left: 2vw;
+  font-size: 14px;
+  color: rgb(1, 218, 218);
+}
+.iSpan {
+  perspective: 500px;
+  transition: all 1s linear;
+  position: relative;
+}
+.iSpan:not(.active):hover {
+  cursor: pointer;
+}
+.iSpan:not(.active):hover .three,
+.iSpan:not(.active):focus .three {
+  transform: translateZ(-25px) rotateX(90deg);
+}
+.three {
+  transition: all 2s ease-out;
+  transform: translatez(-25px);
+  transform-style: preserve-3d;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition-delay: 2s;
+  display: none;
+}
+.front {
+  transform: rotatex(0deg) translatez(25px);
+}
+
+.back {
+  transform: rotatex(-90deg) translatez(25px);
+  color: #ffe7c4;
+}
+
+.front,
+.back {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  text-align: center;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+.front > a,
+.back > a {
+  text-decoration: none;
+  color: #000a14;
+}
+.navbar-menu .iSpan .active .front,
+.navbar-menu .iSpan .active .back,
+.navbar-menu .iSpan:hover .front,
+.navbar-menu .iSpan:hover .back {
+  background-color: aqua;
+  background-size: 10px 10px;
+  border-radius: 2px;
+  background-position: 0 0, 30px 30px;
+  color: black;
+}
+.iSpan:hover .three {
+  display: block;
+  transition-delay: 2s;
+}
+.navbar-menu > span > label {
+  margin-left: 0.5vw;
+
+  font-weight: 400;
+  cursor: pointer;
+}
+.navbar-menu > span > label > a {
+  text-decoration: none;
+  color: rgb(199, 199, 199);
+}
+.navbar-menu > span > button {
+  border: 1.5px solid rgb(1, 218, 218);
+  background: none;
+  color: rgb(1, 218, 218);
+  border-radius: 5px;
+  padding: 1vh 2vw;
+}
+.navbar > .navbar-menu > span > label > a:hover {
+  color: aqua;
+  transition: 0.2s;
+}
+.navbar-menu > span > button:hover {
+  background-color: rgba(1, 218, 218, 0.171);
+  color: #000b16;
+  transition: 0.5s;
+}
+.navbar > .navbar-menu > button {
+  display: none;
+}
+.navbar > .navbar-menu > .navbar-toggler > .hamburger-menu {
+  position: fixed;
+  top: -15px;
+  right: 0px;
+  z-index: 10;
+  cursor: pointer;
+}
+.navbar > .navbar-menu > .navbar-toggler {
+  color: #000a14;
+}
+.navbar > .navbar-menu > .navbar-toggler > .hamburger-menu > .menu-bar1,
+.navbar > .navbar-menu > .navbar-toggler > .hamburger-menu > .menu-bar2,
+.navbar > .navbar-menu > .navbar-toggler > .hamburger-menu > .menu-bar3 {
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  margin: 10px 0;
+  transition: 0.4s;
+}
+
+.navbar > .navbar-menu > .navbar-toggler > .hamburger-menu > .menu-bar2 {
+  width: 15px;
+  margin-left: auto;
+}
+
+/* ROTATE FIRST BAR */
+.active
+  .navbar
+  > .navbar-menu
+  > .navbar-toggler
+  > .hamburger-menu
+  > .menu-bar1 {
+  /* transform: rotate(-45deg) translate(-7px, 8px); */
+  transform: rotate(-45deg) translate(-0.7rem, 0.8rem);
+}
+
+/* FADE OUT SECOND BAR */
+.active
+  .navbar
+  > .navbar-menu
+  > .navbar-toggler
+  > .hamburger-menu
+  > .menu-bar2 {
+  opacity: 0;
+}
+
+/* ROTATE LAST BAR */
+.active
+  .navbar
+  > .navbar-menu
+  > .navbar-toggler
+  > .hamburger-menu
+  > .menu-bar3 {
+  /* transform: rotate(45deg) translate(-6px, -8px); */
+  transform: rotate(45deg) translate(-0.6rem, -0.8rem);
+}
+
+/* Neon Button */
+/* 12 */
+
+.btn-12 {
+  margin-left: 25px;
+  color: #0bf4f3;
+  position: relative;
+  right: 20px;
+  bottom: 20px;
+  border: none;
+  width: 130px;
+  height: 40px;
+  font-size: var(--step-0);
+  line-height: 40px;
+  -webkit-perspective: 230px;
+  perspective: 230px;
+}
+.btn-12 span {
+  display: block;
+  position: absolute;
+  width: 130px;
+  height: 40px;
+  border: 1px solid #0bf4f3;
+  box-shadow: 0 0 5px #0bf4f3, 0 0 5px #0bf4f3 inset;
+  margin: 0;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.btn-12 span:nth-child(1) {
+  box-shadow: 0 0 5px #0bf4f3, 0 0 5px #0bf4f3 inset;
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-12 span:nth-child(2) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-12:hover span:nth-child(1) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+.btn-12:hover span:nth-child(2) {
+  background: #000;
+  color: #000;
+  box-shadow: 0 0 5px #0bf4f3, 0 0 5px #0bf4f3 inset;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+}
+
+.collapse {
+  background-color: #000a14;
+  margin-top: -10px;
+  padding: 5px 5px;
+}
+.collapse > ul {
+  display: flex;
+  align-items: center;
+  font-family: "Mono";
+}
+.collapse > ul > li > a {
+  color: rgb(199, 199, 199);
+}
+.collapse > ul > li > a:hover {
+  color: rgba(199, 199, 199, 0.719);
+}
+.collapse > ul > li > a > button {
+  border: 1.5px solid rgb(1, 218, 218);
+  background: none;
+  color: rgb(1, 218, 218);
+  border-radius: 5px;
+  padding: 1vh 2vw;
+}
+.collapse > ul > li > a > button:hover {
+  background-color: rgba(1, 218, 218, 0.959);
+  color: #000b16;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.collapse {
+  display: none;
+}
+@media screen and (max-width: 1098px) {
+  .navbar > .navbar-menu > .nav-menu {
+    display: none;
+  }
+  .navbar > .navbar-menu > button {
+    display: block;
+  }
+  .collapse {
+    display: block;
+  }
+}
